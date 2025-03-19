@@ -6,11 +6,11 @@
 /*   By: lflayeux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:00:00 by lflayeux          #+#    #+#             */
-/*   Updated: 2025/01/03 15:11:04 by lflayeux         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:11:44 by lflayeux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_rules_print(const char *format, va_list args)
 {

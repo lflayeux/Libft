@@ -6,11 +6,11 @@
 /*   By: lflayeux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:00:35 by lflayeux          #+#    #+#             */
-/*   Updated: 2024/12/02 18:44:42 by lflayeux         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:10:45 by lflayeux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putnbrhexa(unsigned long int nb)
 {

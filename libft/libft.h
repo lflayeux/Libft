@@ -6,7 +6,7 @@
 /*   By: lflayeux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:28:20 by lflayeux          #+#    #+#             */
-/*   Updated: 2024/11/26 19:32:42 by lflayeux         ###   ########.fr       */
+/*   Updated: 2025/03/19 14:40:56 by lflayeux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -32,7 +33,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-//		Part1
+//LIBFT
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
@@ -103,5 +104,28 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 void	*ft_calloc(size_t nb, size_t size);
+
+// GET_NEXT_LINE
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+char	*ft_realloc(char *full_buf, char *buf);
+int		ft_strchr_split(char *str, char c);
+char	*ft_read(char *full_buf, int fd);
+char	*ft_line(char *full_buf);
+char	*ft_stay(char *full_buf);
+char	*get_next_line(int fd);
+void	*ft_calloc_gnl(size_t nb, size_t size);
+
+// FT_PRINTF
+
+int		ft_putnbrhexa(unsigned long int nb);
+int		ft_putnbrhexa_up(unsigned long int nb);
+int		ft_putchar(int c);
+int		ft_putstr(char *str);
+int		ft_putnbr(long int nb);
+int		ft_printf(const char *format, ...);
 
 #endif

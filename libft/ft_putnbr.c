@@ -6,11 +6,11 @@
 /*   By: lflayeux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:04:20 by lflayeux          #+#    #+#             */
-/*   Updated: 2024/12/02 18:16:56 by lflayeux         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:09:56 by lflayeux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putnbr(long int nb)
 {

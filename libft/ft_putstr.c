@@ -6,11 +6,11 @@
 /*   By: lflayeux <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:07:55 by lflayeux          #+#    #+#             */
-/*   Updated: 2024/12/02 18:58:26 by lflayeux         ###   ########.fr       */
+/*   Updated: 2025/03/19 13:11:21 by lflayeux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putstr(char *str)
 {

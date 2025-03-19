@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
-SRC_LIBFT =	ft_atoi.c \
+SRC =	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -35,8 +35,9 @@ SRC_LIBFT =	ft_atoi.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
-
-SRC_PRINTF =	ft_putchar.c \
+		get_next_line.c \
+		get_next_line_utils.c \
+		ft_putchar.c \
 		ft_putnbr.c \
 		ft_putnbrhexa.c \
 		ft_putnbrhexa_up.c \
@@ -53,27 +54,35 @@ BONUS = ft_lstnew_bonus.c \
 		ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
 
-ALL_FILES = $(SRC_LIBFT) $(BONUS)
+GREEN = \033[32m
+RED = \033[31m
+YELLOW = \033[33m
+RESET = \033[0m
 
-OBJ = $(SRC_LIBFT:.c=.o) $(SRC_PRINTF:.c=.o) 
+ALL_FILES = $(SRC) $(BONUS)
+
+OBJ = $(SRC:.c=.o)
 
 OBJ_BONUS = $(ALL_FILES:.c=.o)
 
 $(NAME) : $(OBJ)
-	ar -rcs -o $@ $^
+	@ar -rcs -o $@ $^
+	@echo "$(GREEN)libft.a created successfully ! ✅ $(RESET)"
 
 bonus : $(OBJ_BONUS)
-	ar -rcs -o $(NAME) $^
+	@ar -rcs -o $(NAME) $^
 
 all : $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean :
-	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ) $(OBJ_BONUS)
+	@echo "$(YELLOW)libft object files cleaned. 🧹$(RESET)"
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(YELLOW)libft cleaned. 🧹$(RESET)"
 
 re : fclean all
